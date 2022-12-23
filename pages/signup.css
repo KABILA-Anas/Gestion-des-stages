@@ -1,0 +1,426 @@
+:root {
+    --main-color: #7096FF;
+    --secondary-color: #9eb8ff;
+    --lighter-color: #e0e0e7;
+    --light-color: #b0b0c0;
+    --dark-color: #52505e;
+
+    --font-smaller: 14px;
+    --font-bigger: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    *background: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,h2,h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    border: 8px solid var(--lighter-color);
+    border-radius: 15px;
+    background-color: #faf9ff;
+}
+
+.form-box .progress {
+    position: relative;
+    padding: 1em;
+}
+
+.logo {
+    font-size: 1.75em;
+    font-weight: 800;
+    color: var(--dark-color);
+    padding: 40px 48px;
+    text-align: center;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+/* == Progress Steps */
+.progress ul.progress-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.progress ul.progress-steps li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.progress ul.progress-steps li > span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-smaller);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: var(--lighter-color);
+    z-index: 1;
+}
+
+.progress ul.progress-steps li.active > span {
+    color: white;
+    background-color: var(--main-color);
+    border: 4px solid var(--secondary-color);
+    z-index: 1;
+}
+
+.progress ul.progress-steps li p span {
+    font-size: var(--font-smaller);
+    color: var(--light-color);
+    display: none;
+}
+
+.progress ul li p {
+    position: absolute;
+    top: -2em;
+    font-size: 12px;
+}
+
+/* == Form */
+.form-box form {
+    width: 100%;
+    padding: 3em 1em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form > div p {
+    color: var(--light-color);
+    margin-bottom: 2em;
+}
+
+form > div > div:not(.checkbox) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+form :where(input,select) {
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: var(--secondary-color);
+    border: 1px solid var(--lighter-color);
+    background-color: transparent;
+}
+
+form label {
+    font-size: var(--font-smaller);
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+form .grouping {
+    display: flex;
+}
+
+form .grouping input {
+    max-width: 70px;
+    text-align: center;
+    margin-right: 1em;
+}
+
+form .checkbox input {
+    height: auto;
+}
+
+form > div:not(.btn-group) {
+    display: none;
+    -webkit-animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -wekbit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        -wekbit-transform: translateY(0%);
+        transform: translateY(0);
+    }
+}
+
+form > div.active {
+    display: block;
+}
+
+form > div .bg-svg {
+    width: 60px;
+    height: 60px;
+}
+
+form > .form-one .bg-svg {
+    background: url(icons/assets/personal.svg);
+}
+
+form > .form-two .bg-svg {
+    background: url(icons/assets/contact.svg);
+}
+
+form > .form-three .bg-svg {
+    background: url(icons/assets/studies.svg);
+}
+
+form > .form-four .bg-svg {
+    background: url(icons/assets/security.svg);
+}
+
+/* == Button */
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.btn-group [class*="btn-"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 1em 2.5em;
+    border: 4px solid var(--secondary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition: background-color .3s, border-color .3s ease-out;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+
+.btn-group [class*="btn-"]:disabled {
+    background-color: var(--light-color);
+    border-color: var(--lighter-color);
+    cursor: text;
+}
+
+.btn-group [class*="btn-"]:hover:not(:disabled) {
+    background-color: var(--dark-color);
+    border-color: var(--light-color);
+}
+
+.btn-group .btn-submit {
+    display: none;
+}
+.form-four.active ~ .btn-group .btn-next {
+    display: none;
+}
+
+.form-four.active ~ .btn-group .btn-submit {
+    display: block;
+}
+
+.form-four.active ~ .btn-group {
+    justify-content: space-between;
+}
+
+
+
+::placeholder {
+    color: var(--light-color);
+}
+
+
+.btn-warnin{
+    position: relative;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #7096FF;
+    border: 0;
+    transition: 0.2s;
+    overflow: hidden;
+    letter-spacing: 0.05em; 
+  }
+  
+  .btn-warnin input[type = "file"]{
+    cursor: pointer;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: scale(3);
+    opacity: 0;
+  }
+  
+  .btn-warnin:hover{
+    background-color: #4675f8;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 8px #4675f8;
+  }
+
+
+  .containerim {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+ 
+  .avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: auto;
+  }
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+  }
+  .avatar-upload .avatar-edit input {
+    display: none;
+  }
+  .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+  }
+  .avatar-upload .avatar-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+  }
+  .avatar-upload .avatar-edit input + label:after {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+  .avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+@media screen and (min-width: 768px) {
+
+    .form-box {
+        flex-direction: row;
+    }
+
+    .form-box .progress {
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .logo {
+        margin: -48px -48px 48px;
+    }
+
+    .progress ul.progress-steps {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 2px;
+        height: 65px;
+        background-color: var(--lighter-color);
+    }
+
+    .form-box form {
+        padding: 3em;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .progress ul li p {
+        position: relative;
+        top: 0.4em;
+        font-size: inherit;
+    }
+
+    .progress ul.progress-steps li p span {
+        display: block;
+    }
+}

@@ -1,0 +1,116 @@
+html{
+    background-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+html,body{
+    height: 100%;
+}
+
+.elm {
+    background-color: #FFFFFF;
+    
+  }
+
+  .pic{
+    background: url('images/logpic.png');
+  }
+
+  .bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .overlay{
+    background: rgba(25, 83, 245, 0.6);
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .logfrm{
+    margin-top: auto; 
+  margin-bottom: auto; 
+  top: 0; 
+  bottom: 0;
+  }
+
+
+  .titgrp{
+    text-align: center;
+  }
+
+  .title{
+    text-align: center;
+    font-style: normal;
+font-weight: 800;
+font-size: 55px;
+color: #7096FF;
+  }
+
+  .title1{
+    
+    color: #000000;
+    font-style: normal;
+font-weight: 500;
+font-size: 25px;
+  }
+
+  .title2{
+    color: #B5B1B1;
+    font-style: normal;
+font-weight: 500;
+font-size: 15px;
+  }
+
+  .inptit{
+    color: #000000;
+    font-weight: 600;
+  }
+
+  input{
+    border: 1px solid rgba(168, 168, 168, 0.8);
+    border-radius: 17px;
+    box-sizing: border-box;
+    width: 385px;
+    height: 50px;
+    
+  }
+
+  button{
+    width: 385px;
+    height: 50px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #7096FF;
+    border-radius: 17px !important;
+    border: 0px;
+  }
+
+  .qst{
+    font-weight: 400;
+   color: #1E1D1D;
+}
+
+.link{
+  font-weight: 600;
+
+color: #4B8CC8;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/** Select **/
+
+.select{
+  width: 50%;
+  margin-bottom: 10%;
+}

@@ -1,0 +1,274 @@
+html{
+    background-color: #FFFEFB;
+}
+
+body,nav {
+    font-family: 'Poppins';
+}
+
+
+
+.postxt{
+  font-family: 'inter';
+}
+
+.wei {
+    font-weight: bolder;
+}
+
+.find {
+    font-weight: 600;
+    font-size: 140px;
+    color: #2E2E2E;
+}
+
+.navt {
+    color: #7096FF !important;
+    font-weight: 800 !important;
+    font-size: 25px !important;
+}
+
+
+
+.navlink {
+    color: #BFBFBF !important;
+    font-weight: 500 !important;
+}
+
+.blue{
+    color: #7196FF !important;
+    font-size: small;
+    text-decoration: none !important;
+}
+
+  .navbar .navbar-nav .nav-link:hover {
+    color: #7196FF !important;
+  }
+  .navbar .navbar-nav .nav-item {
+    position: relative;
+  }
+  .underline::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #7196FF;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all 0.5s;
+  }
+
+  .active_link_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #7196FF;
+    content: "";
+    height: 4px;
+  }
+
+  .active_link_color{
+    color: #7196FF !important;
+  }
+
+  
+  
+  .underline:hover::after {
+    width: 100%;
+  }
+
+  .tit{
+    justify-content: center;
+  }
+
+  .elm {
+    background-color: #FFFEFB;
+    padding: 1rem; 
+  }
+
+  .dish{
+    pointer-events: none !important;
+    
+  }
+
+  .back:hover {
+    background-color: #BFBFBF !important;
+  }
+
+  .cont{
+    margin-top: 60px !important;
+  }
+
+
+
+  .brd{
+    border: 2px solid #D6D6D6;
+    width: fit-content;
+    border-radius: 7px;
+    padding: 12px;
+    font-family: 'inter';
+    margin-top: 0px;
+    
+}
+
+.poste{
+    color: #747070;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.ville{
+  color: #616161;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.duree{
+  color: #616161;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.desc{
+    color: #616161;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.guide{
+  text-decoration-line: underline;
+  font-weight: 600;
+  font-style: normal;
+  color: #1E1D1D;
+  font-family: 'Poppins';
+  margin-left: 45px;
+}
+
+.guide2{
+  text-decoration-line: underline;
+  font-weight: 600;
+  font-style: normal;
+  color: #1E1D1D;
+  font-family: 'Poppins';
+  margin-left: 120%;
+  
+}
+
+.greenc{
+  width: 23px;
+  height: 23px; 
+  left: 566px; 
+  top: 278px; 
+  background: #6FF5B5; 
+  border-radius: 20px;
+}
+
+.grayc{
+  width: 23px;
+  height: 23px; 
+  left: 566px; 
+  top: 278px; 
+  background: #CAD2CE; 
+  border-radius: 20px;
+}
+
+.redc{
+  width: 23px;
+  height: 23px; 
+  left: 566px; 
+  top: 278px; 
+  background: #E160B5; 
+  border-radius: 20px;
+}
+
+.content{
+  margin-left: 40px; 
+  margin-right: 40px;
+}
+
+.pub_col{
+  margin-left: auto; 
+  margin-right: auto; 
+  left: 0; 
+  right: 0;
+}
+
+.butt_align{
+   
+  margin-right: 40px;
+}
+
+.butt_style{
+  font-weight: 700; 
+  background: #7096FF; 
+  border-radius: 16px; 
+  color: #FFFFFF; 
+  width: 143px; 
+  height: 44px; 
+  border: 0px; 
+}
+
+.blank_col{
+  position:fixed; 
+  right: 0; 
+  height: 100%;
+}
+
+.guid1_col{
+  position:fixed; 
+  height: 100%; 
+  bottom: 0;
+}
+
+.guid2_col{
+  left: 25px; 
+  position: absolute; 
+  bottom: 0;
+}
+  
+.time{
+  color: #616161;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.statut_style{
+  color: #7096FF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration-line: underline;
+  margin-right: 40px;;
+}
+
+.Postule_label{
+  text-align:end;
+  text-decoration:underline;
+  color: cornflowerblue;
+}
+
+
+/** Search bar CSS **/
+.search{
+  width: 80%;
+  background-color: #e9ecef;
+  border-radius: 0.25em;
+}
+
+.loop{
+    block-size: 25px;
+}
+
+.input-group .rounded{
+  background-color: #e9ecef !important;
+  border: 1px solid #e9ecef;
+  
+}
+/********************/

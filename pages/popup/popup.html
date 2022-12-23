@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="action">
+        <div class="profile" onclick="menuToggle()">
+            <img src="img.jpg" alt="">
+        </div>
+        <div class="menu">
+            <h3><?php if( isset($_SESSION['user_name']) ) echo $_SESSION['user_name']['user_firstname'].'<br>'.$_SESSION['user_name']['user_lastname']; else echo "undefined user"; ?></h3>
+        
+            <ul>
+                <li><img src="user.png" alt=""><a href="">My profile</a> </li>
+                <li><img src="envelope.png" alt=""><a href="">Inbox</a> </li>
+                <li><img src="question.png" alt=""><a href="">Help</a> </li>
+                <li><img src="log-out.png" alt=""><a href="">Log out</a> </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector(".menu");
+            toggleMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
